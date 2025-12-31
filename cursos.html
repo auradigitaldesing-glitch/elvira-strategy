@@ -12,14 +12,14 @@
   <style>
     :root{
       /* Paleta Elvira Strategy */
-      --paper:#FBFBFB;   /* blanco */
-      --ink:#020202;     /* negro texto */
-      --bg:#131E24;      /* negro verdoso */
-      --bg2:#213130;     /* verde petróleo muy oscuro */
-      --teal:#124D44;    /* verde teal */
-      --wine:#852F34;    /* vino */
-      --olive:#474945;   /* gris oliva */
-      --g1:#A3A6A5;      /* gris claro */
+      --paper:#FBFBFB;
+      --ink:#020202;
+      --bg:#131E24;
+      --bg2:#213130;
+      --teal:#124D44;
+      --wine:#852F34;
+      --olive:#474945;
+      --g1:#A3A6A5;
 
       /* UI */
       --panel: rgba(255,255,255,.06);
@@ -36,13 +36,12 @@
       --r-sm: 14px;
       --max: 1180px;
 
-      /* Acentos (para que TODA la paleta se vea) */
       --accent: var(--teal);
       --accent2: var(--wine);
       --accentSoft: rgba(18,77,68,.22);
       --accent2Soft: rgba(133,47,52,.18);
-      --lineSoft: rgba(163,166,165,.25); /* g1 */
-      --lineOlive: rgba(71,73,69,.32);   /* olive */
+      --lineSoft: rgba(163,166,165,.25);
+      --lineOlive: rgba(71,73,69,.32);
     }
 
     *{ box-sizing: border-box; }
@@ -51,24 +50,22 @@
       margin:0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
-
-      /* Aquí metemos TODOS los colores en el ambiente */
       background:
-        radial-gradient(1200px 600px at 14% 18%, rgba(18,77,68,.26), transparent 55%),   /* teal */
-        radial-gradient(980px 520px at 86% 22%, rgba(133,47,52,.22), transparent 55%),  /* wine */
-        radial-gradient(1100px 720px at 50% 100%, rgba(163,166,165,.12), transparent 55%), /* g1 */
+        radial-gradient(1200px 600px at 14% 18%, rgba(18,77,68,.26), transparent 55%),
+        radial-gradient(980px 520px at 86% 22%, rgba(133,47,52,.22), transparent 55%),
+        radial-gradient(1100px 720px at 50% 100%, rgba(163,166,165,.12), transparent 55%),
         linear-gradient(180deg, var(--bg), var(--bg2));
       overflow-x: hidden;
     }
 
-    /* Fondo tipo Greeko */
+    /* Fondo */
     .bg-image{
       position: fixed;
       inset: 0;
       background-image:
         radial-gradient(900px 600px at 20% 20%, rgba(18,77,68,.18), transparent 60%),
         radial-gradient(800px 560px at 80% 30%, rgba(133,47,52,.14), transparent 60%),
-        radial-gradient(900px 640px at 55% 70%, rgba(71,73,69,.10), transparent 62%), /* olive */
+        radial-gradient(900px 640px at 55% 70%, rgba(71,73,69,.10), transparent 62%),
         url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2400&q=70");
       background-size: cover;
       background-position: center;
@@ -95,7 +92,6 @@
       z-index: 50;
       padding: 10px 0;
     }
-
     .nav{
       display:flex;
       align-items:center;
@@ -104,12 +100,11 @@
       padding: 14px 18px;
       border-radius: 999px;
       background: rgba(12,16,18,.62);
-      border: 1px solid rgba(163,166,165,.16); /* g1 */
+      border: 1px solid rgba(163,166,165,.16);
       box-shadow: 0 18px 50px rgba(0,0,0,.45);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
     }
-
     .brand{
       display:flex;
       align-items:center;
@@ -120,11 +115,8 @@
       width: 34px;
       height: 34px;
       border-radius: 12px;
-      background:
-        radial-gradient(circle at 30% 30%, rgba(251,251,251,.50), rgba(18,77,68,.30)), /* paper + teal */
-        linear-gradient(135deg, rgba(18,77,68,.85), rgba(133,47,52,.22)); /* teal + wine */
-      border: 1px solid rgba(163,166,165,.22);
-      box-shadow: 0 10px 30px rgba(18,77,68,.18);
+      object-fit: contain;
+      display: block;
     }
     .brand b{ font-weight: 800; letter-spacing: .2px; }
 
@@ -161,7 +153,6 @@
       min-width: 240px;
       justify-content:flex-end;
     }
-
     .icon-pill{
       width: 38px;
       height: 38px;
@@ -201,14 +192,12 @@
       border-color: rgba(0,0,0,.20);
       box-shadow: 0 16px 40px rgba(18,77,68,.18);
     }
-    /* Vino (secundario) */
     .btn.wine{
       background: linear-gradient(135deg, rgba(133,47,52,1), rgba(71,73,69,1));
       color: rgba(251,251,251,.96);
       border-color: rgba(0,0,0,.20);
       box-shadow: 0 16px 40px rgba(133,47,52,.16);
     }
-
     .btn.ghost{
       background: rgba(0,0,0,.10);
       border-color: rgba(163,166,165,.18);
@@ -223,7 +212,7 @@
       color: rgba(251,251,251,.9);
     }
 
-    /* HERO */
+    /* HERO (SE QUEDA IGUAL) */
     .hero{
       padding: 66px 0 36px;
       min-height: calc(78vh - 120px);
@@ -269,7 +258,7 @@
     .sub{
       margin: 0 auto;
       max-width: 72ch;
-      color: rgba(163,166,165,.90); /* g1 visible */
+      color: rgba(163,166,165,.90);
       font-size: 15px;
       line-height: 1.65;
     }
@@ -291,7 +280,7 @@
     .mini-pill{
       padding: 8px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(71,73,69,.35); /* olive */
+      border: 1px solid rgba(71,73,69,.35);
       background: rgba(251,251,251,.04);
       font-size: 12px;
       font-weight: 650;
@@ -304,31 +293,6 @@
     }
 
     section{ padding: 56px 0; }
-
-    /* ===== GLASS CARDS ===== */
-    .glass-card{
-      border-radius: var(--r-lg);
-      border: 1px solid rgba(163,166,165,.18);
-      background: rgba(8,12,14,.55);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      padding: 32px;
-      margin-top: 18px;
-    }
-    .glass-card h2{
-      font-size: clamp(26px, 3.2vw, 44px);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      margin: 0 0 14px;
-      line-height: 1.05;
-    }
-    .glass-card p{
-      margin: 0 0 18px;
-      color: rgba(163,166,165,.90);
-      line-height: 1.7;
-      font-size: 14px;
-    }
 
     /* ===== SECTION HEAD ===== */
     .section-head{
@@ -367,110 +331,260 @@
       font-size: 14px;
     }
 
-    .service-grid{
-      display:grid;
-      gap: 16px;
-      margin-top: 18px;
-    }
-    .service-card{
-      position: relative;
-      overflow: hidden;
+    /* ===== GLASS ===== */
+    .glass{
       border-radius: var(--r-lg);
       border: 1px solid rgba(163,166,165,.18);
       background: rgba(8,12,14,.55);
       box-shadow: var(--shadow);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
+      padding: 30px;
+      overflow:hidden;
+      position: relative;
+    }
+
+    /* ===== PRICING ===== */
+    .pricing-wrap{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .price-card{
+      border-radius: var(--r-lg);
+      border: 1px solid rgba(163,166,165,.18);
+      background: rgba(8,12,14,.55);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 22px;
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+      position: relative;
+      overflow:hidden;
       transition: .18s ease;
     }
-    .service-card:hover{
+    .price-card:hover{
       transform: translateY(-2px);
-      border-color: rgba(163,166,165,.26);
+      border-color: rgba(163,166,165,.28);
       background: rgba(10,14,16,.62);
     }
-    .service-row{
-      display:grid;
-      grid-template-columns: 1.08fr .92fr;
-      min-height: 220px;
+
+    .price-card::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(520px 260px at 22% 10%, rgba(18,77,68,.22), transparent 62%),
+        radial-gradient(520px 260px at 78% 0%, rgba(133,47,52,.18), transparent 62%);
+      filter: blur(10px);
+      opacity: .9;
+      pointer-events:none;
     }
-    .service-left{
-      padding: 26px 26px 22px;
+
+    .pc-top{ position: relative; display:flex; align-items:flex-start; justify-content:space-between; gap: 10px; }
+    .pc-tag{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(163,166,165,.18);
+      background: rgba(251,251,251,.05);
+      color: rgba(251,251,251,.86);
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    .pc-tag .dot{ width: 8px; height: 8px; box-shadow: 0 0 0 5px rgba(18,77,68,.12); }
+
+    .pc-badge{
+      position: relative;
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 950;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      border: 1px solid rgba(133,47,52,.28);
+      background: rgba(133,47,52,.14);
+      color: rgba(251,251,251,.92);
+      white-space: nowrap;
+    }
+
+    .pc-title{ position: relative; margin: 0; font-size: 22px; font-weight: 950; letter-spacing: -0.01em; }
+    .pc-desc{ position: relative; margin: 0; color: rgba(163,166,165,.92); line-height: 1.7; font-size: 13.5px; }
+
+    .pc-price{ position: relative; display:flex; align-items:flex-end; gap: 10px; margin-top: 6px; }
+    .pc-price .amount{
+      font-size: 46px;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: -0.06em;
+    }
+    .pc-price .unit{
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(163,166,165,.90);
+      padding-bottom: 8px;
+    }
+    .pc-price .hint{
+      margin-left:auto;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(163,166,165,.80);
+      padding-bottom: 10px;
+    }
+
+    .pc-divider{
+      position: relative;
+      height: 1px;
+      background: rgba(163,166,165,.16);
+      margin: 2px 0 0;
+    }
+
+    .pc-list{
+      position: relative;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display:grid;
+      gap: 10px;
+    }
+    .pc-list li{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      color: rgba(251,251,251,.86);
+      line-height: 1.6;
+      font-size: 13px;
+    }
+    .check{
+      flex: 0 0 auto;
+      width: 18px; height: 18px;
+      border-radius: 6px;
+      border: 1px solid rgba(163,166,165,.20);
+      background: rgba(251,251,251,.05);
+      display:grid;
+      place-items:center;
+      margin-top: 2px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.18);
+    }
+    .check svg{ width: 14px; height: 14px; }
+
+    .pc-cta{
+      position: relative;
+      margin-top: auto;
       display:flex;
       flex-direction:column;
       gap: 10px;
     }
-    .service-top{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 10px;
+    .pc-note{
+      font-size: 12px;
+      color: rgba(163,166,165,.86);
+      line-height: 1.5;
     }
-    .service-icon{
-      width: 44px;
-      height: 44px;
+
+    /* Variantes */
+    .price-card.teal .pc-tag .dot{ background: var(--teal); }
+    .price-card.wine .pc-tag .dot{ background: var(--wine); box-shadow: 0 0 0 5px rgba(133,47,52,.12); }
+    .price-card.wine .pc-badge{ border-color: rgba(18,77,68,.30); background: rgba(18,77,68,.16); }
+
+    /* Plan recomendado (centro) */
+    .price-card.featured{
+      border-color: rgba(133,47,52,.34);
+      background:
+        radial-gradient(520px 260px at 30% 10%, rgba(133,47,52,.20), transparent 62%),
+        radial-gradient(520px 260px at 78% 0%, rgba(18,77,68,.18), transparent 62%),
+        rgba(8,12,14,.58);
+      transform: translateY(-6px);
+    }
+    .price-card.featured:hover{ transform: translateY(-8px); }
+    .pc-ribbon{
+      position:absolute;
+      right: 16px;
+      top: 16px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-weight: 950;
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(251,251,251,.95);
+      border: 1px solid rgba(133,47,52,.34);
+      background: linear-gradient(135deg, rgba(133,47,52,.92), rgba(71,73,69,.28));
+      box-shadow: 0 16px 40px rgba(133,47,52,.14);
+      z-index: 2;
+    }
+
+    /* ===== MODULOS / INCLUYE ===== */
+    .two-col{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .steps{
+      display:grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .step{
+      border-radius: 22px;
+      border: 1px solid rgba(163,166,165,.18);
+      background: rgba(0,0,0,.16);
+      padding: 14px;
+      display:flex;
+      gap: 12px;
+      align-items:flex-start;
+    }
+    .step .num{
+      width: 42px; height: 42px;
       border-radius: 999px;
       display:grid;
       place-items:center;
+      font-weight: 950;
+      letter-spacing: -0.02em;
+      border: 1px solid rgba(163,166,165,.18);
+      background: rgba(251,251,251,.05);
       color: rgba(251,251,251,.92);
-      font-weight: 900;
-      border: 1px solid rgba(163,166,165,.20);
-      box-shadow: 0 18px 40px rgba(0,0,0,.18);
+      box-shadow: 0 14px 30px rgba(0,0,0,.22);
     }
-    .service-icon.teal{ background: rgba(18,77,68,.26); border-color: rgba(18,77,68,.28); }
-    .service-icon.wine{ background: rgba(133,47,52,.22); border-color: rgba(133,47,52,.26); }
+    .step.teal .num{ border-color: rgba(18,77,68,.30); background: rgba(18,77,68,.14); }
+    .step.wine .num{ border-color: rgba(133,47,52,.30); background: rgba(133,47,52,.12); }
 
-    .service-tag{
-      display:inline-flex;
-      align-items:center;
-      gap: 8px;
+    .step h3{
+      margin: 0;
+      font-size: 14px;
+      font-weight: 950;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
+    .step p{
+      margin: 6px 0 0;
+      color: rgba(163,166,165,.92);
+      line-height: 1.7;
+      font-size: 13px;
+    }
+
+    .chips{ display:flex; flex-wrap:wrap; gap: 10px; margin-top: 12px; }
+    .chip{
       padding: 8px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(163,166,165,.18);
+      border: 1px solid rgba(71,73,69,.38);
       background: rgba(251,251,251,.04);
       color: rgba(251,251,251,.78);
       font-size: 12px;
       font-weight: 800;
-      text-transform: lowercase;
-    }
-    .service-tag .dot{
-      width: 8px; height: 8px;
-      border-radius: 99px;
-      background: var(--teal);
-      box-shadow: 0 0 0 5px rgba(18,77,68,.12);
-    }
-    .service-tag.wine .dot{
-      background: var(--wine);
-      box-shadow: 0 0 0 5px rgba(133,47,52,.12);
-    }
-
-    .service-title{
-      margin: 0;
-      font-size: 22px;
-      letter-spacing: -0.01em;
-      font-weight: 900;
-      line-height: 1.15;
-    }
-    .service-text{
-      margin: 0;
-      color: rgba(163,166,165,.92);
-      line-height: 1.65;
-      font-size: 13.5px;
-      max-width: 64ch;
-    }
-    .chip-row{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 8px;
-    }
-    .chip{
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(71,73,69,.38); /* olive */
-      background: rgba(251,251,251,.04);
-      color: rgba(251,251,251,.78);
-      font-size: 12px;
-      font-weight: 700;
     }
     .chip.wine{
       border-color: rgba(133,47,52,.42);
@@ -478,46 +592,90 @@
       color: rgba(251,251,251,.88);
     }
 
-    .service-right{
-      position: relative;
-      overflow: hidden;
-      border-left: 1px solid rgba(163,166,165,.14);
-      background:
-        radial-gradient(260px 220px at 40% 35%, rgba(18,77,68,.18), transparent 60%),
-        radial-gradient(320px 240px at 85% 20%, rgba(133,47,52,.16), transparent 62%),
-        radial-gradient(360px 260px at 75% 70%, rgba(163,166,165,.10), transparent 65%),
-        linear-gradient(135deg, rgba(8,12,14,.15), rgba(8,12,14,.58));
+    /* ===== FAQ ===== */
+    .faq{
+      margin-top: 18px;
+      display:grid;
+      gap: 12px;
+    }
+    .qa{
+      border-radius: 22px;
+      border: 1px solid rgba(163,166,165,.18);
+      background: rgba(8,12,14,.55);
+      box-shadow: 0 24px 60px rgba(0,0,0,.35);
+      overflow:hidden;
+    }
+    .qa button{
+      width: 100%;
+      border: 0;
+      background: transparent;
+      color: rgba(251,251,251,.92);
+      padding: 16px 16px;
       display:flex;
-      align-items:stretch;
-      justify-content:stretch;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      cursor:pointer;
+      font-weight: 900;
+      letter-spacing: -.01em;
+      text-align:left;
     }
-    .service-img{
-      flex:1;
-      background-size: cover;
-      background-position: center;
-      filter: saturate(.9) contrast(1.02) brightness(.92);
-      opacity: .92;
+    .qa button:hover{ background: rgba(251,251,251,.04); }
+    .qa .ans{
+      padding: 0 16px 16px;
+      color: rgba(163,166,165,.92);
+      line-height: 1.7;
+      font-size: 13.5px;
+      display:none;
     }
-    .service-fab{
-      position:absolute;
-      right: 18px;
-      top: 18px;
-      width: 56px; height: 56px;
+    .qa.open .ans{ display:block; }
+    .chev{
+      width: 38px; height: 38px;
       border-radius: 999px;
+      border: 1px solid rgba(163,166,165,.18);
+      background: rgba(251,251,251,.05);
       display:grid;
       place-items:center;
-      background: linear-gradient(135deg, rgba(18,77,68,1), rgba(33,49,48,1));
-      color: rgba(251,251,251,.96);
-      border: 1px solid rgba(0,0,0,.14);
-      box-shadow: 0 18px 45px rgba(18,77,68,.18);
+      flex: 0 0 auto;
     }
-    .service-fab.wine{
-      background: linear-gradient(135deg, rgba(133,47,52,1), rgba(71,73,69,1));
-      box-shadow: 0 18px 45px rgba(133,47,52,.16);
-    }
-    .service-fab svg{ width: 20px; height: 20px; }
+    .qa.open .chev svg{ transform: rotate(180deg); }
+    .chev svg{ transition: .18s ease; }
 
-    /* ===== FOOTER ===== */
+    /* ===== CTA ===== */
+    .big-cta{
+      border-radius: var(--r-lg);
+      border: 1px solid rgba(163,166,165,.18);
+      background:
+        radial-gradient(820px 320px at 20% 30%, rgba(18,77,68,.22), transparent 60%),
+        radial-gradient(820px 320px at 86% 10%, rgba(133,47,52,.18), transparent 60%),
+        rgba(8,12,14,.55);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .big-cta h2{
+      margin: 0;
+      font-size: clamp(26px, 3.6vw, 48px);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+    .big-cta p{
+      margin: 10px 0 0;
+      color: rgba(163,166,165,.92);
+      line-height: 1.7;
+      font-size: 14px;
+      max-width: 64ch;
+    }
+
+    /* FOOTER */
     .footer{
       padding: 40px 0 56px;
       border-top: 1px solid rgba(163,166,165,.14);
@@ -545,6 +703,7 @@
       width: 30px;
       height: 30px;
       border-radius: 11px;
+      object-fit: contain;
     }
     .footer-brand b{
       font-size: 14px;
@@ -603,71 +762,8 @@
       gap: 12px;
       flex-wrap: wrap;
     }
-    .footer-bottom a{
-      color: rgba(251,251,251,.82);
-      border-bottom: 1px dashed rgba(163,166,165,.35);
-    }
-    .footer-bottom a:hover{
-      color: rgba(251,251,251,.95);
-      border-bottom-color: rgba(251,251,251,.55);
-    }
 
-    @media (max-width: 980px){
-      .nav-links{ display:none; }
-      .hamburger{ display:inline-flex; align-items:center; justify-content:center; }
-      .brand{ min-width: unset; }
-      .nav-cta{ min-width: unset; gap: 8px; }
-      .nav{ padding: 12px 14px; gap: 10px; }
-      .icon-pill{ width: 36px; height: 36px; }
-      .btn{ padding: 10px 14px; font-size: 13px; }
-      .hero{ min-height: unset; padding: 40px 0 24px; }
-      .hero-inner{ padding: 24px 0 0; }
-      h1{ max-width: 100%; font-size: clamp(36px, 8vw, 64px); }
-      .sub{ font-size: 14px; padding: 0 12px; }
-      .hero-actions{ gap: 10px; margin-top: 18px; }
-      .btn{ width: 100%; justify-content: center; }
-      .pill-row{ margin-top: 16px; gap: 8px; }
-      .mini-pill{ font-size: 11px; padding: 6px 10px; }
-      .section-head{ align-items:flex-start; flex-direction:column; gap: 12px; }
-      .service-row{ grid-template-columns: 1fr; }
-      .service-left{ padding: 20px; }
-      .service-right{ border-left: none; border-top: 1px solid rgba(163,166,165,.14); min-height: 180px; }
-      .service-grid{ gap: 14px; }
-      .service-title{ font-size: 20px; }
-      .service-text{ font-size: 13px; }
-      .chip-row{ gap: 8px; }
-      .chip{ font-size: 11px; padding: 6px 10px; }
-      .glass-card{ padding: 24px 20px; }
-      .glass-card h2{ font-size: clamp(24px, 6vw, 40px); }
-      .glass-card p{ font-size: 13px; }
-      .footer-inner{ flex-direction:column; align-items:flex-start; gap: 16px; }
-      .social{ justify-content:flex-start; width: 100%; }
-      .footer-bottom{ flex-direction: column; align-items: flex-start; gap: 8px; }
-      .wrap{ width: calc(100% - 32px); }
-      section{ padding: 40px 0; }
-    }
-
-    @media (max-width: 480px){
-      .nav{ padding: 10px 12px; }
-      .logo{ width: 28px; height: 28px; }
-      .brand b{ font-size: 13px; }
-      .icon-pill{ width: 32px; height: 32px; }
-      .icon-pill svg{ width: 16px; height: 16px; }
-      .btn{ padding: 10px 12px; font-size: 12px; }
-      .hamburger{ width: 38px; height: 38px; }
-      h1{ font-size: clamp(32px, 10vw, 56px); line-height: 1; }
-      .kicker{ font-size: 11px; padding: 6px 12px; }
-      .sub{ font-size: 13px; line-height: 1.6; }
-      .hero-actions{ flex-direction: column; }
-      .btn{ width: 100%; }
-      .service-left{ padding: 18px; }
-      .service-title{ font-size: 18px; }
-      .glass-card{ padding: 20px 18px; }
-      .glass-card h2{ font-size: clamp(22px, 6vw, 36px); }
-      .section-title{ font-size: clamp(24px, 6vw, 40px); }
-      .section-desc{ font-size: 13px; }
-    }
-
+    /* Mobile menu */
     .mobile-menu{
       display:none;
       margin-top: 10px;
@@ -689,6 +785,28 @@
     }
     .mobile-menu a:hover{ background: rgba(251,251,251,.06); }
     .mobile-menu.show{ display:block; }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .nav-links{ display:none; }
+      .hamburger{ display:inline-flex; align-items:center; justify-content:center; }
+      .brand{ min-width: unset; }
+      .nav-cta{ min-width: unset; gap: 8px; }
+      .hero{ min-height: unset; padding: 40px 0 24px; }
+      .hero-inner{ padding: 24px 0 0; }
+      h1{ max-width: 100%; font-size: clamp(36px, 8vw, 64px); }
+      .sub{ font-size: 14px; padding: 0 12px; }
+      .btn{ width: 100%; justify-content: center; }
+      .pricing-wrap{ grid-template-columns: 1fr; }
+      .price-card.featured{ transform: none; }
+      .price-card.featured:hover{ transform: translateY(-2px); }
+      .two-col{ grid-template-columns: 1fr; }
+      .wrap{ width: calc(100% - 32px); }
+      section{ padding: 40px 0; }
+      .section-head{ flex-direction:column; align-items:flex-start; }
+      .social{ justify-content:flex-start; }
+      .footer-bottom{ flex-direction: column; align-items: flex-start; }
+    }
   </style>
 </head>
 
@@ -696,11 +814,12 @@
   <div class="bg-image" aria-hidden="true"></div>
   <div class="bg-overlay" aria-hidden="true"></div>
 
+  <!-- NAV -->
   <div class="nav-shell">
     <div class="wrap">
       <nav class="nav" aria-label="Navegación principal">
         <a class="brand" href="index.html" aria-label="Inicio Elvira Strategy">
-          <div class="logo" aria-hidden="true"></div>
+          <img src="assets/Logo/Elvira Strategy .png" alt="Elvira Strategy" class="logo" />
           <div><b>Elvira Strategy</b></div>
         </a>
 
@@ -742,6 +861,7 @@
     </div>
   </div>
 
+  <!-- HERO (sin cambios) -->
   <header class="hero">
     <div class="wrap">
       <div class="hero-inner">
@@ -759,7 +879,7 @@
 
           <div class="hero-actions">
             <a class="btn primary" href="consultoria.html">Ver consultoría</a>
-            <a class="btn wine" href="https://api.whatsapp.com/send/?phone=%2B525578634127&text&type=phone_number&app_absent=0" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+            <a class="btn wine" href="https://api.whatsapp.com/send/?phone=%2B525578634127&text=Hola%2C%20quiero%20info%20de%20cursos%20Elvira%20Strategy&type=phone_number&app_absent=0" target="_blank" rel="noopener">Escribir por WhatsApp</a>
           </div>
 
           <div class="pill-row">
@@ -772,150 +892,337 @@
     </div>
   </header>
 
-  <section id="enfoque">
+  <!-- PRICING -->
+  <section id="comprar">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <div class="badge"><span class="dot" aria-hidden="true"></span> QUÉ ENCONTRARÁS</div>
-          <div class="section-title">Formación que se aplica</div>
+          <div class="badge"><span class="dot" aria-hidden="true"></span> COMPRAR</div>
+          <div class="section-title">Elige el formato que necesita tu equipo</div>
           <p class="section-desc">
-            Programas prácticos para alinear equipos, construir criterio común y aterrizar herramientas en el día a día.
+            Tres opciones para avanzar con claridad: desde fundamentos hasta implementación con seguimiento.
           </p>
         </div>
       </div>
 
-      <div class="service-grid">
-        <article class="service-card">
-          <div class="service-row">
-            <div class="service-left">
-              <div class="service-top">
-                <div class="service-icon teal" aria-hidden="true">✦</div>
-                <div class="service-tag"><span class="dot" aria-hidden="true"></span> fundamentos</div>
-              </div>
+      <div class="pricing-wrap">
+        <!-- ESENCIAL -->
+        <article class="price-card teal">
+          <div class="pc-top">
+            <div class="pc-tag"><span class="dot" aria-hidden="true"></span> Esencial</div>
+          </div>
 
-              <h3 class="service-title">Fundamentos</h3>
-              <p class="service-text">
-                Conceptos base para alinear equipo y criterio.
-              </p>
+          <h3 class="pc-title">Fundamentos (rápido y claro)</h3>
+          <p class="pc-desc">Para alinear lenguaje, criterio y “lo mínimo viable” para empezar bien.</p>
 
-              <div class="chip-row">
-                <span class="chip">Glosario</span>
-                <span class="chip">Casos</span>
-                <span class="chip wine">Frameworks</span>
-              </div>
-            </div>
+          <div class="pc-price">
+            <div class="amount">MXN</div>
+            <div class="unit">Consultar</div>
+            <div class="hint">Por grupo</div>
+          </div>
 
-            <div class="service-right" aria-hidden="true">
-              <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=70');"></div>
-              <div class="service-fab" title="Ver detalle">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M7 17 17 7" stroke="rgba(251,251,251,.92)" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M10 7h7v7" stroke="rgba(251,251,251,.92)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-            </div>
+          <div class="pc-divider"></div>
+
+          <ul class="pc-list">
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 10 17l9-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Sesión de fundamentos (DEI + ODS) para equipo
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 10 17l9-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Glosario + frameworks base (listos para usar)
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 10 17l9-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Casos + “cómo aplicarlo” en contexto real
+            </li>
+          </ul>
+
+          <div class="pc-cta">
+            <a class="btn primary" href="https://api.whatsapp.com/send/?phone=%2B525578634127&text=Hola%2C%20quiero%20cotizar%20el%20plan%20ESENCIAL%20de%20cursos&type=phone_number&app_absent=0" target="_blank" rel="noopener">Solicitar info</a>
+            <div class="pc-note">Ideal si quieres arrancar rápido y con criterio común.</div>
           </div>
         </article>
 
-        <article class="service-card">
-          <div class="service-row">
-            <div class="service-left">
-              <div class="service-top">
-                <div class="service-icon wine" aria-hidden="true">≡</div>
-                <div class="service-tag wine"><span class="dot" aria-hidden="true"></span> talleres</div>
-              </div>
+        <!-- PROFESIONAL (RECOMENDADO) -->
+        <article class="price-card wine featured">
+          <div class="pc-ribbon">Recomendado</div>
 
-              <h3 class="service-title">Talleres</h3>
-              <p class="service-text">
-                Sesiones prácticas para aterrizar lo aprendido.
-              </p>
+          <div class="pc-top">
+            <div class="pc-tag"><span class="dot" aria-hidden="true"></span> Profesional</div>
+            <div class="pc-badge">Taller aplicado</div>
+          </div>
 
-              <div class="chip-row">
-                <span class="chip">Dinámicas</span>
-                <span class="chip wine">Plantillas</span>
-                <span class="chip">Aplicación</span>
-              </div>
-            </div>
+          <h3 class="pc-title">Herramientas + Taller (se aterriza)</h3>
+          <p class="pc-desc">Para equipos que no quieren “solo teoría”: salen con plantillas y próximos pasos.</p>
 
-            <div class="service-right" aria-hidden="true">
-              <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=70');"></div>
-              <div class="service-fab wine" title="Ver detalle">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M7 17 17 7" stroke="rgba(251,251,251,.92)" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M10 7h7v7" stroke="rgba(251,251,251,.92)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-            </div>
+          <div class="pc-price">
+            <div class="amount">MXN</div>
+            <div class="unit">Consultar</div>
+            <div class="hint">Por grupo</div>
+          </div>
+
+          <div class="pc-divider"></div>
+
+          <ul class="pc-list">
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 10 17l9-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Fundamentos + taller práctico (dinámicas y aplicación)
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 10 17l9-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Plantillas: diagnóstico rápido + prioridades + plan inicial
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 10 17l9-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Q&A guiado (preguntas difíciles, casos y decisiones)
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 10 17l9-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Entregable final: “qué hacemos mañana” (checklist)
+            </li>
+          </ul>
+
+          <div class="pc-cta">
+            <a class="btn wine" href="https://api.whatsapp.com/send/?phone=%2B525578634127&text=Hola%2C%20quiero%20cotizar%20el%20plan%20PROFESIONAL%20de%20cursos&type=phone_number&app_absent=0" target="_blank" rel="noopener">Quiero este</a>
+            <div class="pc-note">El mejor balance: claridad + herramientas + aterrizaje.</div>
           </div>
         </article>
 
-        <article class="service-card">
-          <div class="service-row">
-            <div class="service-left">
-              <div class="service-top">
-                <div class="service-icon teal" aria-hidden="true">▦</div>
-                <div class="service-tag"><span class="dot" aria-hidden="true"></span> implementación</div>
-              </div>
+        <!-- PREMIUM -->
+        <article class="price-card teal">
+          <div class="pc-top">
+            <div class="pc-tag"><span class="dot" aria-hidden="true"></span> Premium</div>
+          </div>
 
-              <h3 class="service-title">Implementación</h3>
-              <p class="service-text">
-                Cómo llevarlo a procesos, métricas y operación.
-              </p>
+          <h3 class="pc-title">Implementación (con seguimiento)</h3>
+          <p class="pc-desc">Para equipos que necesitan sostenerlo: roadmap, métricas y cadencia.</p>
 
-              <div class="chip-row">
-                <span class="chip wine">Roadmap</span>
-                <span class="chip">KPIs</span>
-                <span class="chip">Cadencia</span>
-              </div>
-            </div>
+          <div class="pc-price">
+            <div class="amount">MXN</div>
+            <div class="unit">Consultar</div>
+            <div class="hint">Por grupo</div>
+          </div>
 
-            <div class="service-right" aria-hidden="true">
-              <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=70');"></div>
-              <div class="service-fab" title="Ver detalle">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M7 17 17 7" stroke="rgba(251,251,251,.92)" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M10 7h7v7" stroke="rgba(251,251,251,.92)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-            </div>
+          <div class="pc-divider"></div>
+
+          <ul class="pc-list">
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 10 17l9-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Taller + diseño de plan por fases (roadmap)
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 10 17l9-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              KPIs sugeridos + formato de reporte ejecutivo
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 10 17l9-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Sesión de seguimiento (para ajustar y sostener)
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5 10 17l9-10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Recomendación de gobernanza (roles y responsabilidades)
+            </li>
+          </ul>
+
+          <div class="pc-cta">
+            <a class="btn primary" href="https://api.whatsapp.com/send/?phone=%2B525578634127&text=Hola%2C%20quiero%20cotizar%20el%20plan%20PREMIUM%20de%20cursos&type=phone_number&app_absent=0" target="_blank" rel="noopener">Agendar llamada</a>
+            <div class="pc-note">Ideal si ya sabes que hay que implementarlo y medirlo.</div>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section>
+  <!-- INCLUYE -->
+  <section id="incluye">
     <div class="wrap">
-      <div class="glass-card">
-        <h2>Próximamente</h2>
-        <p>Aquí se publican fechas, niveles, temarios y registro cuando estén listos.</p>
+      <div class="section-head">
+        <div>
+          <div class="badge"><span class="dot" aria-hidden="true"></span> QUÉ INCLUYE</div>
+          <div class="section-title">Formación que se aplica (sin humo)</div>
+          <p class="section-desc">
+            Un flujo simple para que el equipo entienda, aterrice y ejecute.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <section>
-    <div class="wrap">
-      <div class="glass-card">
-        <h2>¿Quieres enterarte cuando abramos fechas?</h2>
-        <p>Mándanos un WhatsApp y te avisamos cuando haya calendario.</p>
-        <div class="hero-actions" style="margin-top: 22px; justify-content: flex-start;">
-          <a class="btn primary" href="https://api.whatsapp.com/send/?phone=%2B525578634127&text&type=phone_number&app_absent=0" target="_blank" rel="noopener">Enviar WhatsApp</a>
-          <a class="btn ghost" href="index.html">Volver al inicio</a>
+      <div class="two-col">
+        <div class="glass">
+          <h2 style="margin:0 0 8px; font-size: clamp(22px, 2.8vw, 34px); font-weight: 950; letter-spacing:-.02em;">El camino del curso</h2>
+          <p style="margin:0; color: rgba(163,166,165,.92); line-height:1.7; font-size:14px;">
+            Tres etapas: fundamento → herramienta → ejecución. En cada una se construye un entregable claro.
+          </p>
+
+          <div class="steps">
+            <div class="step teal">
+              <div class="num">1</div>
+              <div>
+                <h3>Fundamentos</h3>
+                <p>Lenguaje común, criterios y puntos clave para decisiones consistentes.</p>
+              </div>
+            </div>
+            <div class="step wine">
+              <div class="num">2</div>
+              <div>
+                <h3>Herramientas</h3>
+                <p>Plantillas y dinámicas para aterrizar: prioridades, riesgos y acciones.</p>
+              </div>
+            </div>
+            <div class="step teal">
+              <div class="num">3</div>
+              <div>
+                <h3>Implementación</h3>
+                <p>Roadmap por fases, KPIs y cadencia para sostenerlo en operación.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="chips">
+            <span class="chip">Plantillas</span>
+            <span class="chip wine">Taller</span>
+            <span class="chip">Roadmap</span>
+            <span class="chip">KPIs</span>
+          </div>
+        </div>
+
+        <div class="glass">
+          <h2 style="margin:0 0 8px; font-size: clamp(22px, 2.8vw, 34px); font-weight: 950; letter-spacing:-.02em;">Modalidad</h2>
+          <p style="margin:0; color: rgba(163,166,165,.92); line-height:1.7; font-size:14px;">
+            Ajustamos a tu equipo. Idealmente en vivo para facilitar conversaciones difíciles y alinear criterios.
+          </p>
+
+          <div class="steps" style="margin-top:14px;">
+            <div class="step teal">
+              <div class="num">◎</div>
+              <div>
+                <h3>En vivo</h3>
+                <p>Sesiones facilitadas (ideal para equipos y casos reales).</p>
+              </div>
+            </div>
+            <div class="step wine">
+              <div class="num">▣</div>
+              <div>
+                <h3>Con material</h3>
+                <p>Documentos y plantillas para que el equipo lo ejecute sin fricción.</p>
+              </div>
+            </div>
+            <div class="step teal">
+              <div class="num">↻</div>
+              <div>
+                <h3>Seguimiento (opcional)</h3>
+                <p>Revisión y ajustes para sostener implementación y métricas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-actions" style="justify-content:flex-start; margin-top:16px;">
+            <a class="btn primary" href="#faq">Ver dudas frecuentes</a>
+            <a class="btn ghost" href="consultoria.html">Si necesitas estructura → consultoría</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER con redes -->
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="badge"><span class="dot" aria-hidden="true"></span> FAQ</div>
+          <div class="section-title">Preguntas típicas</div>
+          <p class="section-desc">Para que todo quede claro antes de comprar.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="qa">
+          <button type="button" aria-expanded="false">
+            <span>¿Esto es para empresas o también para equipos pequeños?</span>
+            <span class="chev" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="ans">
+            Funciona para ambos. La diferencia está en el formato (tiempo, dinámica y número de personas). Lo ajustamos al tamaño del equipo.
+          </div>
+        </div>
+
+        <div class="qa">
+          <button type="button" aria-expanded="false">
+            <span>¿Hay materiales y plantillas incluidas?</span>
+            <span class="chev" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="ans">
+            Sí. La idea es que no se quede en teoría: hay plantillas para aterrizar prioridades, acciones y medición (según el plan).
+          </div>
+        </div>
+
+        <div class="qa">
+          <button type="button" aria-expanded="false">
+            <span>¿Qué plan me recomiendas si quiero “aplicarlo ya”?</span>
+            <span class="chev" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="ans">
+            Profesional. Es el balance entre claridad + herramientas + taller aplicado. Si además necesitas sostenerlo, Premium.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta">
+    <div class="wrap">
+      <div class="big-cta">
+        <div>
+          <h2>LET’S WORK<br/>TOGETHER</h2>
+          <p>Si quieres calendario, costos y formato exacto para tu equipo, lo vemos por WhatsApp.</p>
+        </div>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn primary" href="https://api.whatsapp.com/send/?phone=%2B525578634127&text=Hola%2C%20quiero%20calendario%20y%20costos%20de%20cursos%20Elvira%20Strategy&type=phone_number&app_absent=0" target="_blank" rel="noopener">Pedir info</a>
+          <a class="btn ghost" href="#comprar">Ver paquetes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap">
       <div class="footer-inner">
         <div class="footer-left">
           <div class="footer-brand">
-            <div class="logo" aria-hidden="true"></div>
-            <div>
-              <b>Elvira Strategy</b>
-            </div>
+            <img src="assets/Logo/Elvira Strategy .png" alt="Elvira Strategy" class="logo" />
+            <div><b>Elvira Strategy</b></div>
           </div>
           <p class="footer-copy">
             Estrategia real, ejecución fina. Claridad, estructura y seguimiento para que lo importante
@@ -943,7 +1250,7 @@
             Instagram
           </a>
 
-          <a class="teal" href="https://api.whatsapp.com/send/?phone=%2B525578634127&text&type=phone_number&app_absent=0" target="_blank" rel="noopener">
+          <a class="teal" href="https://api.whatsapp.com/send/?phone=%2B525578634127&text=Hola%2C%20quiero%20info%20de%20cursos%20Elvira%20Strategy&type=phone_number&app_absent=0" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M20 12a8 8 0 0 1-11.7 7L4 20l1-4.2A8 8 0 1 1 20 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
               <path d="M9.4 9.2c.3-.3.8-.3 1.1 0l.7.7c.3.3.3.8 0 1.1l-.4.4c.7 1.2 1.7 2.2 2.9 2.9l.4-.4c.3-.3.8-.3 1.1 0l.7.7c.3.3.3.8 0 1.1l-.4.4c-.5.5-1.2.7-1.9.6-3.7-.7-6.7-3.7-7.4-7.4-.1-.7.1-1.4.6-1.9l.4-.4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -955,9 +1262,7 @@
 
       <div class="footer-bottom">
         <div>© <span id="year"></span> Elvira Strategy</div>
-        <div>
-          <span style="color:rgba(163,166,165,.75);">Hecho para comunicar con intención.</span>
-        </div>
+        <div><span style="color:rgba(163,166,165,.75);">Hecho para comunicar con intención.</span></div>
       </div>
     </div>
   </footer>
@@ -970,7 +1275,23 @@
     if (hamburger) {
       hamburger.addEventListener("click", () => mobileMenu.classList.toggle("show"));
     }
+
+    // FAQ accordion
+    document.querySelectorAll(".qa button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const box = btn.closest(".qa");
+        const isOpen = box.classList.contains("open");
+        document.querySelectorAll(".qa").forEach(q => {
+          q.classList.remove("open");
+          const b = q.querySelector("button");
+          if (b) b.setAttribute("aria-expanded", "false");
+        });
+        if (!isOpen) {
+          box.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
   </script>
 </body>
 </html>
-
